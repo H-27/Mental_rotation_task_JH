@@ -96,9 +96,6 @@ const practice = custom_views.keypress_rotation_practice({
     name: 'practice',
     trial_type: 'practice',
     pause: 250,
-    hook: {
-        after_response_enabled: time_limit
-    },
     data: _.shuffle(practice_trials.key_press),
     key1: "f",
     key2: "j",
@@ -112,9 +109,6 @@ const main = custom_views.keypress_rotation_main({
     name: 'main',
     trial_type: 'main',
     pause: 250,
-    hook: {
-        after_response_enabled: time_limit
-    },
     data: _.shuffle(main_trials.key_press),
     key1: "f",
     key2: "j",

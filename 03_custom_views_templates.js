@@ -58,6 +58,12 @@ custom_views.keypress_rotation_practice = function(config) {
                         $('#feedback').text('Incorrect!');
                     }
 
+                    if (RT >= 7500) {
+                        correctness = "timeout";
+                        $(".magpie-view-stimulus").addClass("magpie-invisible");
+                        $('#feedback').text('Please answer more quickly!');
+                    }
+
                     const trial_data = {
                         trial_type: config.trial_type,
                         trial_number: CT + 1,
@@ -180,6 +186,12 @@ custom_views.keypress_rotation_main = function(config) {
 
                     } else {
                         correctness = "incorrect";
+                    }
+
+                    if (RT >= 7500) {
+                        correctness = "timeout";
+                        $(".magpie-view-stimulus").addClass("magpie-invisible");
+                        $('#feedback').text('Please answer more quickly!');
                     }
 
                     const trial_data = {
